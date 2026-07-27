@@ -1,0 +1,6 @@
+(kicad_project
+  (version 1)
+  (generator "gemini-cli-init-script")
+  (main_schema "carrier-board.kicad_sch")
+  (main_board "carrier-board.kicad_pcb")
+)
