@@ -1,56 +1,53 @@
 # STM32G474 Carrier Board
 
-This folder contains the KiCad 8 project files for the STM32G474RET6 carrier board.
+This folder contains the KiCad project files for the STM32G474RET6 carrier board.
 
-## Contents
+## Board Overview
 
-- `carrier-board.kicad_pro` - KiCad project file for the carrier board.
-- `carrier-board.kicad_sch` - Main KiCad schematic file (defines sheet structure).
-- `power_usb.kicad_sch` - Schematic page for Power and USB sections.
-- `mcu_core.kicad_sch` - Schematic page for MCU, Debug, and Reset.
-- `peripherals.kicad_sch` - Schematic page for LEDs and Encoder.
-- `expansion.kicad_sch` - Schematic page for the expansion connector.
-- `carrier-board.kicad_pcb` - KiCad PCB board file.
+This carrier board is built around the STM32G474RET6 MCU (LQFP64) designed with 0805 SMD components for manual soldering and JLCPCB assembly compatibility. Main hardware features include:
 
-## Board overview
+- **USB-C Interface:** USB 2.0 Full-Speed (PA11/PA12) with dual 5.1kΩ CC1/CC2 pull-down resistors for Type-C power negotiation.
+- **Power Supply:** +5V VBUS input regulated to +3.3V via AMS1117-3.3 LDO, with 10µF input and output decoupling capacitors.
+- **MCU Filtering & Decoupling:** Global 100nF/10µF decoupling capacitors on all VDD/VSS pins, plus ferrite bead (FB1) LC filtering for VDDA/VREF+.
+- **Clock & Reset:** 8MHz HSE Crystal oscillator with 22pF load capacitors; hardware reset button with 10kΩ pull-up and 100nF RC debounce filter.
+- **Boot Management:** BOOT0 (Pin 60 / PB8) anchored to GND with a 10kΩ pull-down resistor for reliable Flash memory execution.
+- **Debug SWD:** Tag-Connect TC2030 footprint (SWDIO on PA13, SWCLK on PA14, SWO on PB3, NRST).
+- **Board Identification (HWID):** 4-bit digital ID (PC0–PC3) with 10kΩ pull-downs + Analog ID (PA0) resistive divider (R6/R7).
+- **Chainable Expansion Headers (J4/J5):** 4-pin male/female connectors carrying +5V pass-through power and I2C2 bus (SDA on PA8, SCL on PA9 with 4.7kΩ pull-ups to +3.3V).
+- **16-pin Board-to-Board Connector (J2):** 2x8 header routing native SPI1 / PWM, I2C2, 3x TRT_GPIO, 4-bit HWID, and power rails.
 
-This carrier board is intended for the STM32G474RET6 MCU with the following main sections:
+## Pinout for Carrier
 
-- USB-C power and data connector
-- 3.3V LDO power supply (AP2112K-3.3)
-- MCU decoupling and reset circuitry
-- Debug SWD via Tag-Connect TC2030-NL footprint
-- RGB LED ring (SK6812) and Rotary Encoder
-- 2x10 Board-to-Board expansion header
+Pin 1 (GND)
+Pin 2 (SPI_CS / PWM): PA4
+Pin 3 (+5V)
+Pin 4 (SPI_MOSI / PWM): PA7
+Pin 5 (TRT_GPIO_1): PA1
+Pin 6 (SPI_MISO / PWM): PA6
+Pin 7 (+3.3V)
+Pin 8 (SPI_SCK / PWM): PA5
+Pin 9 (TRT_GPIO_2): PA2
+Pin 10 (HWID_0): PC0
+Pin 11 (SDA): PA8
+Pin 12 (HWID_1): PC1
+Pin 13 (SCL): PA9
+Pin 14 (HWID_2): PC2
+Pin 15 (TRT_GPIO_3): PA3
+Pin 16 (HWID_3): PC3
 
-## Notes
-
-- This project was initialized for KiCad 8.
-- The schematic is organized into a flat, multi-page structure.
-- The PCB file is pre-configured with a 4-layer stackup, 50x50mm board outline, and M2.5 mounting holes.
-- Components have been added to the schematic but require wiring. They have been imported into the PCB but require placement and routing.
-- LCSC part numbers are included as custom fields in the schematic symbols for reference.
-
-## How to open
-
-1. Open KiCad 8 or newer.
-2. Open `hardware/carrier-board/carrier-board.kicad_pro`.
-3. The schematic pages and board file will be accessible from the project tree.
-
-## pinout for carrier
-Pin 1 (GND): Plano de masa general y referencia.
-Pin 2 (DAC OUT 2): Salida analógica directa 2 asignada a PA5 (DAC1_OUT2)
-Pin 3 (3.3V): Alimentación principal para la lógica digital (VDD).
-Pin 4 (DAC OUT 2): Salida analógica directa 2 asignada a PA5 (DAC1_OUT2).
-Pin 5 (5V): Línea de potencia de 5V (VBUS USB / Batería).
-Pin 6 (SDA): Bus de datos I2C asignado a PB9 (I2C1_SDA).
-Pin 7 (SCL): Línea de reloj I2C asignada a PB8 (I2C1_SCL).
-Pin 8 (SPI_SCK / PWM): Reloj SPI o salida de temporizador asignado a PA5 (SPI1_SCK / TIM2_CH1).
-Pin 9 (SPI_MISO / PWM): Entrada de datos SPI o canal PWM asignado a PA6 (SPI1_MISO / TIM3_CH1).
-Pin 10 (SPI_MOSI / PWM): Salida de datos SPI o canal PWM asignado a PA7 (SPI1_MOSI / TIM17_CH1).
-Pin 11 (SPI_CS / PWM): Selección de chip SPI o PWM auxiliar asignado a PB6 (GPIO / TIM16_CH1).
-Pin 12 (DIGITAL): Entrada/salida digital general o interrupción externa en PB0 (EXTI0).
-Pin 13 (HW ID 0): Bit 0 (LSB) de identificación digital conectado a PC0.
-Pin 14 (HW ID 1): Bit 1 de identificación digital conectado a PC1.
-Pin 15 (HW ID 2): Bit 2 de identificación digital conectado a PC2.
-Pin 16 (HW ID 3): Bit 3 (MSB) de identificación digital conectado a PC3.
+Pin a2 (SPI_CS / PWM): PA4
+Pin a4 (SPI_MOSI / PWM): PA7
+Pin a6 (SPI_MISO / PWM): PA6
+Pin a8 (SPI_SCK / PWM): PA5
+Pin a10 (HWID_0): PC0
+Pin a12 (HWID_1): PC1
+Pin a14 (HWID_2): PC2
+Pin a16 (HWID_3): PC3
+Pin b2 (GND)
+Pin b4 (+5V)
+Pin b6 (TRT_GPIO_1): PA1
+Pin b8 (+3.3V)
+Pin b10 (TRT_GPIO_2): PA2
+Pin b12 (SDA): PA8
+Pin b14 (SCL): PA9
+Pin b16 (TRT_GPIO_3): PA3
