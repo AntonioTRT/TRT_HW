@@ -6415,12 +6415,6 @@
 		(uuid "20a275eb-e090-4ee3-8aea-d8b6effdd3d8")
 	)
 	(junction
-		(at 74.93 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2ad488c2-4864-49ed-8e4a-19cbb40ea792")
-	)
-	(junction
 		(at 107.95 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6521,6 +6515,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7cd9e48d-f2a9-447b-a08e-a292056a3b79")
+	)
+	(junction
+		(at 74.93 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "88aa1177-1de4-48bd-8909-f0435213736f")
 	)
 	(junction
 		(at 237.49 149.86)
@@ -9445,6 +9445,89 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:Crystal_GND3")
+		(at 78.74 82.55 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1badaa79-b7b6-41b8-beb0-80918a50c5f8")
+		(property "Reference" "Y1"
+			(at 78.74 82.296 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Crystal_GND3"
+			(at 79.248 89.154 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Crystal:Crystal_SMD_5032-4Pin_5.0x3.2mm"
+			(at 78.74 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Three pin crystal, GND on pin 3"
+			(at 78.74 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4e032523-42e6-4d80-86af-f55eed1f9c2d")
+		)
+		(pin "2"
+			(uuid "b759d558-9613-4b4f-bc10-40a62950c699")
+		)
+		(pin "3"
+			(uuid "a798ebda-90ef-4de2-bef8-70caede04b69")
+		)
+		(instances
+			(project "carrier-board"
+				(path "/a1b2c3d4-e5f6-4a1b-9c8d-7e6f5a4b3c2d/c3d4e5f6-a1b2-4c3d-9e8f-5a4b3c2d1e7a"
+					(reference "Y1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:DIN41612_02x08_AB_EvenPins")
 		(at 252.73 31.75 0)
 		(mirror x)
@@ -10245,7 +10328,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x04_P2.00mm_Horizontal"
+		(property "Footprint" "303C-321018-30-04:303C-321018-30-04"
 			(at 264.16 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -11149,7 +11232,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_1P1T_6x3.5mm_H5.0_APEM_MJTP1250"
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_B3U-1000P-B"
 			(at 33.02 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -14338,88 +14421,6 @@
 			(project "carrier-board"
 				(path "/a1b2c3d4-e5f6-4a1b-9c8d-7e6f5a4b3c2d/c3d4e5f6-a1b2-4c3d-9e8f-5a4b3c2d1e7a"
 					(reference "C13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Crystal_GND3")
-		(at 78.74 82.55 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e36478ec-8105-4073-ba4e-d754b84055c6")
-		(property "Reference" "Y1"
-			(at 78.74 82.296 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Crystal_GND3"
-			(at 78.232 89.154 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Crystal:Crystal_SMD_5032-4Pin_5.0x3.2mm"
-			(at 78.74 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 78.74 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Three pin crystal, GND on pin 3"
-			(at 78.74 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c400e066-a14d-4064-b632-e4dd3a568f85")
-		)
-		(pin "2"
-			(uuid "291cf11c-d495-4931-8baf-80e55454a35b")
-		)
-		(pin "3"
-			(uuid "4a285fcc-f562-4a21-a831-566bb0a2b56c")
-		)
-		(instances
-			(project "carrier-board"
-				(path "/a1b2c3d4-e5f6-4a1b-9c8d-7e6f5a4b3c2d/c3d4e5f6-a1b2-4c3d-9e8f-5a4b3c2d1e7a"
-					(reference "Y1")
 					(unit 1)
 				)
 			)
