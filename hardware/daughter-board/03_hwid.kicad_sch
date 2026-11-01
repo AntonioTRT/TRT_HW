@@ -1,0 +1,470 @@
+(kicad_sch
+(version 20260306)
+(generator "eeschema")
+(generator_version "10.0")
+(uuid "e3311613-f698-50e1-92b1-437e61e17817")
+(paper "A4")
+(title_block
+(title "Daughter board - 03 HWID")
+(date "2026-10-30")
+(rev "0.1")
+(company "TRT")
+(comment 1 "4-bit digital HWID. Carrier pulls HWID_0..3 low (10k, R2-R5).")
+(comment 2 "A populated 0R strap to +3.3V sets that bit to 1.")
+)
+(lib_symbols
+	(symbol "Device:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "power:+3.3V"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#PWR"
+			(at 0 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 0 3.556 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "global power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "+3.3V_0_1"
+			(polyline
+				(pts
+					(xy -0.762 1.27) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 2.54) (xy 0.762 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "+3.3V_1_1"
+			(pin power_in line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)
+(symbol
+(lib_id "Device:R")
+(at 40.64 71.12 0)
+(unit 1)
+(body_style 1)
+(exclude_from_sim no)
+(in_bom yes)
+(on_board yes)
+(in_pos_files yes)
+(dnp no)
+(uuid "b663d8b7-d316-5e81-872a-0733947f189b")
+(property "Reference" "R2" (at 42.672 71.12 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Value" "0R" (at 40.64 71.12 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 40.64 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Datasheet" "" (at 40.64 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Description" "" (at 40.64 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "HWID_BIT" "0" (at 40.64 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "75da74a0-5b92-51b9-b9c2-51fae07b9626"))
+(pin "2" (uuid "da2f6ed5-b68e-570c-8ab2-0e9291d54725"))
+(instances (project "daughter-board" (path "/500fde6e-149a-580c-a97c-5225b7ad3cfb/c6a2f72e-641b-589f-a81c-ef750e0d5e6c" (reference "R2") (unit 1))))
+)
+(wire (pts (xy 40.64 67.31) (xy 40.64 64.77)) (stroke (width 0) (type default)) (uuid "ff3b6810-e8ef-57ee-bce6-0ac3bcc51503"))
+(symbol
+(lib_id "power:+3.3V")
+(at 40.64 64.77 0)
+(unit 1)
+(body_style 1)
+(exclude_from_sim no)
+(in_bom no)
+(on_board no)
+(in_pos_files no)
+(dnp no)
+(uuid "e4a38639-f4da-55b8-8df6-9a12ddd3a63a")
+(property "Reference" "#PWR0301" (at 40.64 68.58 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Value" "+3.3V" (at 40.64 61.214 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Footprint" "" (at 40.64 64.77 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Datasheet" "" (at 40.64 64.77 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Description" "" (at 40.64 64.77 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "d34474a9-eb14-5c9f-9c76-c287f651d80b"))
+(instances (project "daughter-board" (path "/500fde6e-149a-580c-a97c-5225b7ad3cfb/c6a2f72e-641b-589f-a81c-ef750e0d5e6c" (reference "#PWR0301") (unit 1))))
+)
+(wire (pts (xy 40.64 74.93) (xy 40.64 77.47)) (stroke (width 0) (type default)) (uuid "50d76690-de9a-5d9a-a3ad-831845467241"))
+(hierarchical_label "HWID_0" (shape bidirectional) (at 40.64 77.47 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3d4133eb-a6b9-549d-a4cb-a7c3824f4d18"))
+(symbol
+(lib_id "Device:R")
+(at 71.12 71.12 0)
+(unit 1)
+(body_style 1)
+(exclude_from_sim no)
+(in_bom yes)
+(on_board yes)
+(in_pos_files yes)
+(dnp yes)
+(uuid "8118b8c8-a225-5987-b4a1-6bbc9dcac69f")
+(property "Reference" "R3" (at 73.152 71.12 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Value" "0R" (at 71.12 71.12 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 71.12 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Datasheet" "" (at 71.12 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Description" "" (at 71.12 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "HWID_BIT" "1" (at 71.12 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "f060156c-6492-5284-85cc-b1761dded270"))
+(pin "2" (uuid "71190db7-f13c-54c9-a74c-6d7977befd19"))
+(instances (project "daughter-board" (path "/500fde6e-149a-580c-a97c-5225b7ad3cfb/c6a2f72e-641b-589f-a81c-ef750e0d5e6c" (reference "R3") (unit 1))))
+)
+(wire (pts (xy 71.12 67.31) (xy 71.12 64.77)) (stroke (width 0) (type default)) (uuid "dfb53c8d-e60a-5627-9a57-388e5a5148de"))
+(symbol
+(lib_id "power:+3.3V")
+(at 71.12 64.77 0)
+(unit 1)
+(body_style 1)
+(exclude_from_sim no)
+(in_bom no)
+(on_board no)
+(in_pos_files no)
+(dnp no)
+(uuid "349df9e7-7270-5166-bfdc-740dfcab908c")
+(property "Reference" "#PWR0302" (at 71.12 68.58 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Value" "+3.3V" (at 71.12 61.214 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Footprint" "" (at 71.12 64.77 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Datasheet" "" (at 71.12 64.77 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Description" "" (at 71.12 64.77 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "3d6ca12e-80a7-5eb8-a910-030907dcdf65"))
+(instances (project "daughter-board" (path "/500fde6e-149a-580c-a97c-5225b7ad3cfb/c6a2f72e-641b-589f-a81c-ef750e0d5e6c" (reference "#PWR0302") (unit 1))))
+)
+(wire (pts (xy 71.12 74.93) (xy 71.12 77.47)) (stroke (width 0) (type default)) (uuid "45d73c23-93be-5888-a654-7caedcafb692"))
+(hierarchical_label "HWID_1" (shape bidirectional) (at 71.12 77.47 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "570c5b32-e8c7-5433-b863-e7583dc9def8"))
+(symbol
+(lib_id "Device:R")
+(at 99.06 71.12 0)
+(unit 1)
+(body_style 1)
+(exclude_from_sim no)
+(in_bom yes)
+(on_board yes)
+(in_pos_files yes)
+(dnp yes)
+(uuid "f09d11f2-9c33-591a-88f3-ba89dd61b34f")
+(property "Reference" "R4" (at 101.092 71.12 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Value" "0R" (at 99.06 71.12 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 99.06 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Datasheet" "" (at 99.06 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Description" "" (at 99.06 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "HWID_BIT" "2" (at 99.06 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "d6ddd9ab-b40f-52e1-b108-d82b51acc056"))
+(pin "2" (uuid "8cbb0812-418c-5e83-b5dc-e92b86c3c4e2"))
+(instances (project "daughter-board" (path "/500fde6e-149a-580c-a97c-5225b7ad3cfb/c6a2f72e-641b-589f-a81c-ef750e0d5e6c" (reference "R4") (unit 1))))
+)
+(wire (pts (xy 99.06 67.31) (xy 99.06 64.77)) (stroke (width 0) (type default)) (uuid "c4da4669-a17f-5785-bdd9-f0b21a2847f4"))
+(symbol
+(lib_id "power:+3.3V")
+(at 99.06 64.77 0)
+(unit 1)
+(body_style 1)
+(exclude_from_sim no)
+(in_bom no)
+(on_board no)
+(in_pos_files no)
+(dnp no)
+(uuid "75e1bb9f-5172-5228-9b5e-db2e72e35afa")
+(property "Reference" "#PWR0303" (at 99.06 68.58 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Value" "+3.3V" (at 99.06 61.214 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Footprint" "" (at 99.06 64.77 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Datasheet" "" (at 99.06 64.77 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Description" "" (at 99.06 64.77 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "a2d6a2e4-4b5d-504c-ad82-4a2f5d62dee9"))
+(instances (project "daughter-board" (path "/500fde6e-149a-580c-a97c-5225b7ad3cfb/c6a2f72e-641b-589f-a81c-ef750e0d5e6c" (reference "#PWR0303") (unit 1))))
+)
+(wire (pts (xy 99.06 74.93) (xy 99.06 77.47)) (stroke (width 0) (type default)) (uuid "1af55341-c99c-58f9-8e7e-91fbeb2cfd16"))
+(hierarchical_label "HWID_2" (shape bidirectional) (at 99.06 77.47 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9c5830dd-8653-51f7-9cab-968c719742b0"))
+(symbol
+(lib_id "Device:R")
+(at 129.54 71.12 0)
+(unit 1)
+(body_style 1)
+(exclude_from_sim no)
+(in_bom yes)
+(on_board yes)
+(in_pos_files yes)
+(dnp yes)
+(uuid "b8643823-2636-5a56-a5e6-6c6f16f98b75")
+(property "Reference" "R5" (at 131.572 71.12 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Value" "0R" (at 129.54 71.12 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 129.54 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Datasheet" "" (at 129.54 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Description" "" (at 129.54 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "HWID_BIT" "3" (at 129.54 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "7bc10a2c-6d06-54c2-8976-128db68b49ba"))
+(pin "2" (uuid "fe3a1e8c-5097-54d2-bf41-0c60a6d0f745"))
+(instances (project "daughter-board" (path "/500fde6e-149a-580c-a97c-5225b7ad3cfb/c6a2f72e-641b-589f-a81c-ef750e0d5e6c" (reference "R5") (unit 1))))
+)
+(wire (pts (xy 129.54 67.31) (xy 129.54 64.77)) (stroke (width 0) (type default)) (uuid "dd981a79-cdba-55dc-b225-d9a437d2d893"))
+(symbol
+(lib_id "power:+3.3V")
+(at 129.54 64.77 0)
+(unit 1)
+(body_style 1)
+(exclude_from_sim no)
+(in_bom no)
+(on_board no)
+(in_pos_files no)
+(dnp no)
+(uuid "f0aaad46-4940-599e-8180-578b379153bd")
+(property "Reference" "#PWR0304" (at 129.54 68.58 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Value" "+3.3V" (at 129.54 61.214 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Footprint" "" (at 129.54 64.77 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Datasheet" "" (at 129.54 64.77 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Description" "" (at 129.54 64.77 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(pin "1" (uuid "a52e394f-74ee-57cc-a2b9-8e2d7a181899"))
+(instances (project "daughter-board" (path "/500fde6e-149a-580c-a97c-5225b7ad3cfb/c6a2f72e-641b-589f-a81c-ef750e0d5e6c" (reference "#PWR0304") (unit 1))))
+)
+(wire (pts (xy 129.54 74.93) (xy 129.54 77.47)) (stroke (width 0) (type default)) (uuid "7cc56cb8-cc66-5b97-b9f8-64e4ed577f20"))
+(hierarchical_label "HWID_3" (shape bidirectional) (at 129.54 77.47 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0a5312aa-dbf1-5de4-b6df-5fde6dd7e463"))
+(text "HWID code = {HWID_3,HWID_2,HWID_1,HWID_0}; populated 0R = 1, DNP = 0\n0x0 no module / unprogrammed\n0x1 potentiometers (this population)\n0x2 mechanical keypad (populate R for HWID_1 only)\n0x3-0x6 reserved: encoders, sliders, LCD, LED ring\n0xF reserved\nDraft allocation - to be confirmed against the TRT module table" (exclude_from_sim no) (at 30 100 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "db3b3c29-e7fe-5277-b3f5-a3e3b6ad38f8"))
+(embedded_fonts no)
+)
